@@ -11,7 +11,6 @@ readme = requests.get(url).text
 # - Level-2 heading is found by the begining of line '^' followed by exactly two '#' then a space '\s', this prevents level-3 or more heading from stopping the capture
 # - .group(1) returns the first (and in this case only) capturing group '(.*?)' (here means everything between '## Tutorials' and next "##")
 tutorials_section = re.search(r"^##\sTutorials(.*?)^##\s", readme, re.S | re.M).group(1)
-print(tutorials_section)
 
 # - Now we can be sure all bullets denoted by '*' (markdown) are tutorials
 # - re.findall returns a list[str] of all matches in the case of one capturing group (this is what we have)
