@@ -1,6 +1,4 @@
-import re
-import random
-import requests
+import re, random, requests
 
 url = 'https://raw.githubusercontent.com/codecrafters-io/build-your-own-x/master/README.md'
 readme = requests.get(url).text
